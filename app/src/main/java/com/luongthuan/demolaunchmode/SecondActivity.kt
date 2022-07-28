@@ -21,8 +21,13 @@ class SecondActivity : AppCompatActivity() {
 
     }
 
-    private fun startActivity(activity: Activity?, targetActivityClass: Class<*>?) {
+    private fun startActivity(
+        activity: Activity?,
+        targetActivityClass: Class<*>?
+    ) {
         val intent = Intent(activity, targetActivityClass)
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
     }
 

@@ -16,11 +16,10 @@
             android:theme="@style/Theme.DemoLaunchMode.NoActionBar" />
 
         <activity
+            android:taskAffinity="com.luongthuan.demolaunchmode"
             android:name=".SecondActivity"
             android:exported="false"
             android:label="@string/title_activity_second"
-            android:launchMode="singleTask"
-
             android:theme="@style/Theme.DemoLaunchMode.NoActionBar" />
 
         <activity

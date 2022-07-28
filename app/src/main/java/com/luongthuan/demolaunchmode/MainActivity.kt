@@ -30,9 +30,6 @@ class MainActivity : AppCompatActivity() {
         isAddFlag: Boolean = false
     ) {
         val intent = Intent(activity, targetActivityClass)
-        if (isAddFlag) {
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_MULTIPLE_TASK
-        }
         startActivity(intent)
     }
 
@@ -47,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnSecond.setOnClickListener {
-            startActivity(this, SecondActivity::class.java, true)
+            startActivity(this, SecondActivity::class.java)
         }
 
         btnThird.setOnClickListener {
